@@ -1,0 +1,7 @@
+The setting files in the ProjectSettings.zip are ONLY TO BE USED IN A BLANK NEW PROJECT!
+
+-- or in the case of import errors, such as tags not being carried over properly -
+
+Do not import these into an existing project, as it will overwrite your project's settings!!!
+
+** We are not responsible for overwritten project files **

@@ -1,0 +1,43 @@
+Thanks for purchasing our products!
+
+This package is the main required "base" to run the Silver AI system. 
+Due to its low price, the advanced features must be purchased separately (only buy what you need!)
+
+This base package already contains most features you need to rapidly add combat AI without coding, including:
+
+- One-Click Add A.I. (see documentation)
+- Melee / Ranged Attacks
+- Health / Armor system
+- Basic Patrol / Wander
+- Advanced line of sight
+- Unlimited teams and targets
+- Advanced Cover System
+- Sample source code
+- 3rd Person Shooter Minigame (full source to 3rd person controller!)
+- UFPS Minigame (UFPS not included)
+- and more!
+
+But if you want more advanced features, we have several extensions available:
+
+*** Advanced Tactical Behaviors ***
+Adds several new abilities such as advanced flanking, escape maneuvers, run away when low HP, call for backup
+and more!
+
+
+*** Advanced Movement System ***
+Replaces current movement component with new features: "Burst-move" ability (AI initially moves with a very
+fast burst of speed),  movement points (AI will become tired after a while and stop moving to recharge), and more!
+
+
+*** Advanced Attack System ***
+Replaces current attack component with new features: Grenade AI, melee attacks now have unlimited random animations,
+unlimited on-hit effects, unlimited melee audio tracks.
+Ranged attacks now have burst-fire mode, inaccuracy modification, multiple bullet-spawn positions (like shotgun)
+and more!
+
+
+*** Advanced Stealth AI ***
+(this extension is under development!)
+
+
+--- have a suggestion? send us an email! aibotsystem@gmail.com ---

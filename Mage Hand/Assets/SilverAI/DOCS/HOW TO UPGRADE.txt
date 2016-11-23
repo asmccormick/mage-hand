@@ -1,0 +1,14 @@
+** UPGRADE INSTRUCTIONS **
+
+If you are upgrading a previous version of SILVER AI, you need to do the following:
+
+1) First, import the NEW package into a blank project so you don't accidentally overwrite something.
+
+2) Read the TXT file, "UPDATE LOG" to see what was updated. Most likely the update concerns only the core engine DLL files.
+
+3) Copy the folder: Assets / SILVER AI System / SILVER CORE and use it to replace the same folder of your previous version. 
+
+4) (optional) If you didn't make any changes to the folder: Assets/SILVER AI System/ then it's actually recommended you copy/paste the entire
+folder over, rather than just the /SILVER CORE/ folder. 
+
+5) (optional) If the update includes new scenes / updated scenes, you may copy over the /DEMO SCENES/ folder as well, but it will replace changes you made to previous demo scenes. 

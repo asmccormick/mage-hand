@@ -1,0 +1,22 @@
+** The AI Engine requires the following tags:
+
+- BulletIgnore
+- Projectile
+- HidingPlace
+
+
+** The Demo Scenes require the following tags:
+
+- Team1
+- Team2
+- Team3
+- Team4
+
+There is currently no way for us to include the tags WITH the Unity Package export.
+So when you run the demo scenes, the AI will throw errors about tags.
+Please add these tags to your project first.
+
+Additionally, we included the ProjectSettings file, in the /DOCS/ folder
+that includes the correct tag settings. You may replace the TagManager
+setting with the ones found in the DOCS folder, BUT only do this
+to a new blank project or you will overwrite existing project settings!

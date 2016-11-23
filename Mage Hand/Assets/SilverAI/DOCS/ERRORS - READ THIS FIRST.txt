@@ -1,0 +1,43 @@
+When first importing the project, you might receive some errors, such as:
+
+- Tag errors ("Team3 is undefined, etc...")
+- UFPS errors
+- NavMesh errors
+- Corrupted files / missing files
+
+-- DONT WORRY! WE FULLY TESTED OUR PACKAGE BEFORE PUBLISHING TO THE ASSET STORE. IF THERE ARE ERRORS, IT'S NOT AN ISSUE WITH OUR SYSTEM. CONTINUE READING --
+
+----------------------------------------------------------
+
+TAG ERRORS:  Sometimes on import,  Unity fails to copy over the tags. You might receive errors such as "Missing Tag: Team 4" or something similar.  To fix this situation, we include a PROJECT SETTINGS.zip file in the /DOCS/ folder.  This file includes the Tag Manager setting required to run the demo scenes. Please copy/paste this file into your Unity project's /PROJECT SETTINGS/ folder.  Do not use the Unity import function -- simply copy/paste it.
+
+UFPS ERRORS: If you're not using UFPS, or you have not already imported UFPS, simply remove the folder "Assets/UFPS Extension"  This is not an issue with our AI.  This is actually an added free bonus integration with the UFPS shooter system. If you're not using that system, simply remove that folder.
+
+
+NAVMESH ERRORS: You shouldn't have this problem as we prebaked all NavMeshes, but if you are, it simply means that the scene's NavMesh isn't baked. Please bake the NavMesh before playing the scene, or the AI will not recognize the environment.
+
+
+CORRUPTED FILES: Sometimes files get corrupted during the download -- this can happen if you're using a firewall, proxy, or antivirus scanner.  Try to turn those off and download again from the Asset Store.  If you're still having problems with missing/corrupted files, contact us on www.AIBotSystem.com with your Invoice Number and we'll email you a new package!  Remember, corrupted files or MISSING SCRIPT errors will result in the demo scenes not working out-of-the-box. If the demo scenes aren't working, please contact us immediately
+and we'll try to resolve it or send you an updated package.
+
+
+AI NOT SHOOTING / MOVING AROUND:  The most common cause of the AI not doing anything, is corrupted tags on import.  Sometimes when you import a new project, for some reason Unity fails to copy over the tags.  And since our AI depends on tags for targeting, this import
+failure will result in the AI not targeting anything at all.  Therefore, check the following:
+
+1) Your scene has the following tags: Team1, Team2, Team3, Team4, BulletIgnore, HidingPlace, Projectile
+2) Your AI prefabs (both in scene, and in project), are tagged.  Make sure their tags aren't BLANK.
+
+*** There is currently no way for us to include the tags WITH the Unity Package export.  We just hope that the tags for your
+specific installation are included, as sometimes they're not.
+So when you run the demo scenes, the AI might throw errors about tags. Or the AI will simply not work at all.
+Please add these tags to your project first if it's missing them.
+Additionally, we included TAG settings located in a zip file in the /DOCS/ folder.  You may extract this file
+to replace your project tag settings.  This will overwrite your existing project's tags so becareful. We're not responsible
+for overwritten project files.  ***
+
+===================================================
+If you still experience issues, email us at: aibotsystem@gmail.com or go to our website at: www.AIBotSystem.com
+And remember, we are not notified when we receive reviews on the Asset Store.  Therefore, please do not leave
+tech support requests or questions on the Asset Store review page, because it will result in a very slow response to you
+
+Thank you and Good luck!

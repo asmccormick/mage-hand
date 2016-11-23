@@ -1,0 +1,88 @@
+
+UPDATE LOG for SILVER AI Core Engine
+======================================================
+Questions & Support: aibotsystem@gmail.com / www.AIBotSystem.com
+======================================================
+
+-------------------------------
+CURRENT VERSION
+-------------------------------
+- Nothing has changed since last update.
+- The reason for this update is to announce to you all
+of future changes that will break your existing projects.
+
+PLEASE READ THE PDF FILE IN THIS FOLDER!
+"Upcoming changes - Important Announcement.pdf"
+
+
+*** VERSION 1.1.7 ***
+
+1) Fully updated to Unity 5.3+
+2) Minor changes: Updated script API to comply with 5.3+
+3) Cleaned some unused files.
+
+
+-------------------------------
+PREVIOUS VERSIONS
+-------------------------------
+
+*** VERSION 1.1.6 ***
+1) Removed unused animation files that were causing some editors to crash on start.
+
+
+*** VERSION 1.1.5 ***
+
+1) UPDATES TO Brain_Standard Combat AI : 
+a) Added setting: Crouch When Hit.  Originally, the AI will automatically crouch
+low when it's getting shot at, but there was no way for you, the developer, to turn it off. Now, we provide
+the option to turn off auto-crouching on hit.  So check this if you want the AI to "duck" down low when its getting
+shot at, and uncheck if you want otherwise.
+b) Added setting: Random Move When Hit.  Lets the AI move in random directions when it's being shot at. This is an attempt to
+get out of his assailant's gun sights.
+c) Added setting: Random Turn When Hit.  If (b) is unchecked, and this setting is checked, then the AI will 
+randomly turn in a direction when being shot at.  This is an attempt to figure out where his shooter is.
+
+
+2) Updated Movement Motor module --> There are 2 new slots at bottom for debug use. This includes
+Target Destination and Distance to Destination.  Both are meant to be watched in the Editor during play-testing
+with live stats.
+
+3) Updated Awareness module --> There are 3 new slots for debug use. This includes Nearest Target,
+Current Target, and Distance to Target.  These are meant to be monitored in real time, during testing.
+They are READ-ONLY. You may also read them from external scripts: GameObject nearestTarget,
+GameObject currentTarget, float distanceToTarget
+
+4) Fixed minor bug in module Death Effects Basic --> It now plays the custom Death trigger animation that you pick.
+Originally, it only plays an animation trigger named "Death"
+
+5) Updated core Silver engine (SilverAI.Core. dll) -- C# integration syntax remains unchanged.
+
+6) Removed potential element (Lightmaps) that was causing the Unity editor to crash for some users.
+So now, the demo scenes look slightly different from before because lightmaps have been removed.
+
+7) Updated NavMesh Agent on sample AI prefabs to have higher Stopping Distance.  Previously, a smaller stopping distance
+resulted in some AI's walking into each other in scenes with lots of AI.
+
+8) Updated ERRORS.txt to reflect some errors that might arise on initial import and how to resolve them.
+
+
+_____________________________________________________________
+
+*** VERSION 1.1 ***
+1) Added experimental ragdoll support 
+	- in the Basic Death Effects component, enable "Use Ragdoll"
+	- this will override the death animations and will use procedural, physics-driven death effects instead
+	- note: your model must have a ragdoll created on it first. use the Unity ragdoll creator.
+	- your ragdoll must be strong enough to widthstand projectile force speeds of 1200 or more,
+	- or else the ragdoll will go flying across the sky on death.
+
+2) Further optimized the Object Pooling system (now much smaller in memory)
+
+3) Added a UI Health component to the Third Person shooter game
+4) Updated Third Person shooter demo scene
+5) Fixed minor bugs / quirks in some demo scenes
+_____________________________________________________________
+
+
+*** VERSION 1.0 ***
+-- initial version.

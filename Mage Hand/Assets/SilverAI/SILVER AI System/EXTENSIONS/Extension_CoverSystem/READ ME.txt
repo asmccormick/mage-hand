@@ -1,0 +1,30 @@
+*** Thank you for purchasing this official extension! ***
+
+--- (COVER SYSTEM IS CURRENTLY INCLUDED AS A BONUS FOR FREE) ---
+
+[VERSION 1.0]
+
+[ This is only available from our website OR the Unity Asset Store. If you got this anywhere else, you have an ILLEGAL COPY. If you let us know where you got the illegal copy from, we will try to reward you! Otherwise, we will prosecute all offenders. ]
+
+Simply copy this entire folder "Extension_CoverSystem" to the following folder in your project:
+
+
+YOUR UNITY PROJECT / Assets / SILVER AI System / EXTENSIONS
+
+
+Instructions on how to use this is in our up-to-date online documentation.
+
+See our website: www.AIBotSystem.com
+Go to the SilverAI section and look for DOCUMENTATION
+
+In the online documentation, there is a section called ADVANCED EXTENSIONS
+
+Find the section for the extension you purchased.  It should contain screenshots and tutorials on using this.
+
+For some plugins, you can actually figure it out without documentation! We made it that easy!
+
+And as always, if you need any help or have questions, we're only an email away:
+
+aibotsystem@gmail.com
+
+Good luck with your development!
