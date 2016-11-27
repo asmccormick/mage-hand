@@ -16,9 +16,9 @@ public class LaptopTesting : MonoBehaviour {
 	void Start () {
 		_leftController.SetActive(true);
 		_rightController.SetActive(true);
-		_head.transform.position = new Vector3(0, 1.6f, 0);
-		_leftController.transform.position = new Vector3(-0.5f, 1.5f, 0.5f);
-		_rightController.transform.position = new Vector3(0, 1.5f, 1.0f);
+		_head.transform.position = new Vector3(_head.transform.position.x, _head.transform.position.y + 1.6f, _head.transform.position.z);
+		_leftController.transform.position = new Vector3(_leftController.transform.position.x -0.5f, _leftController.transform.position.y + 1.5f, _leftController.transform.position.z + 0.5f);
+		_rightController.transform.position = new Vector3(_rightController.transform.position.x, _rightController.transform.position.y + 1.5f, _rightController.transform.position.z + 1.0f);
 		_leftController.transform.SetParent(_head.transform);
 		_rightController.transform.SetParent(_head.transform);
 	}
