@@ -6,11 +6,14 @@ public class TriggerLens : MonoBehaviour {
 	[SerializeField] private Renderer _lensRenderer;
 	[SerializeField] private Renderer _rippleEffectRenderer;
 	[SerializeField] private AnimateRipple _animateRipple;
+	[SerializeField] private Renderer _farHandRenderer;
+	[SerializeField] private Renderer _nearHandRenderer;
 
 	// Use this for initialization
 	void Start () {
 		_lensRenderer.enabled = false;
-		_rippleEffectRenderer.enabled = true;
+		//_rippleEffectRenderer.enabled = true;
+		_farHandRenderer.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -24,7 +27,9 @@ public class TriggerLens : MonoBehaviour {
 		{
 			_lensRenderer.enabled = true;
 			//_rippleEffectRenderer.enabled = true;
-			_animateRipple.Burst();
+			//_animateRipple.Burst();
+			_nearHandRenderer.enabled = false;
+			_farHandRenderer.enabled = true;
 		}
 	}
 
@@ -34,6 +39,8 @@ public class TriggerLens : MonoBehaviour {
 		{
 			_lensRenderer.enabled = false;
 			//_rippleEffectRenderer.enabled = false;
+			_nearHandRenderer.enabled = true;
+			_farHandRenderer.enabled = false; 
 		}
 	}
 }

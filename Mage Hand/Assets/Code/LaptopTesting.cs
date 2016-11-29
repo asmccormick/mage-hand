@@ -19,6 +19,7 @@ public class LaptopTesting : MonoBehaviour {
 		_rightController.SetActive(true);
 		_head.transform.position = new Vector3(_head.transform.position.x, _head.transform.position.y + 1.6f, _head.transform.position.z);
 		_leftController.transform.position = new Vector3(_leftController.transform.position.x -0.5f, _leftController.transform.position.y + 1.5f, _leftController.transform.position.z + 0.5f);
+		_leftController.transform.Rotate(-90,0,0);
 		_rightController.transform.position = new Vector3(_rightController.transform.position.x, _rightController.transform.position.y + 1.5f, _rightController.transform.position.z + 1.0f);
 		_leftController.transform.SetParent(_head.transform);
 		_rightController.transform.SetParent(_head.transform);
@@ -48,9 +49,9 @@ public class LaptopTesting : MonoBehaviour {
 		// rotate Right
 		if (Input.GetKey(KeyCode.RightArrow)) {_rightController.transform.RotateAround(_head.transform.position, Vector3.up, _handRotSpeed);}
 		// rotate Up
-		if (Input.GetKey(KeyCode.UpArrow)) {_rightController.transform.RotateAround(_head.transform.position, Vector3.right, -_handRotSpeed);}
+		if (Input.GetKey(KeyCode.UpArrow)) {_rightController.transform.RotateAround(_head.transform.position, _head.transform.TransformDirection(Vector3.right), -_handRotSpeed);}
 		// rotate Down
-		if (Input.GetKey(KeyCode.DownArrow)) {_rightController.transform.RotateAround(_head.transform.position, Vector3.right, _handRotSpeed);}
+		if (Input.GetKey(KeyCode.DownArrow)) {_rightController.transform.RotateAround(_head.transform.position, _head.transform.TransformDirection(Vector3.right), _handRotSpeed);}
 		// move Forward
 		if (Input.GetKey("r")) {_rightController.transform.Translate(Vector3.forward * _handMoveSpeed);}
 		// move Backward
