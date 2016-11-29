@@ -37,7 +37,7 @@ public class SpawnNPCs : MonoBehaviour {
 		Debug.DrawRay(_newSpawnPos, Vector3.down * 200, Color.white, 1);
 		if (Physics.Raycast(_newSpawnPos, Vector3.down, out _hit))
 		{
-			if (_hit.transform.name == "Ground 1")
+			if (_hit.transform.name == "Ground Central")
 			{
 				Instantiate(_npcPrefab, _hit.point, Quaternion.identity);
 				_qtySpawned++;

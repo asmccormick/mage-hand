@@ -18,4 +18,30 @@ public class WinLoseTriggers : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	public void EnemyKilled ()
+	{
+		Debug.Log("EnemyKilled() called in WinLoseTriggers.cs");
+		_totalEnemies--;
+		CheckWinLose();
+	}
+
+	public void CivilianKilled ()
+	{
+		Debug.Log("CivilianKilled() called in WinLoseTriggers.cs");
+		_totalCivilians--;
+		CheckWinLose();
+	}
+
+	private void CheckWinLose ()
+	{
+		if (_totalEnemies <= 0)
+		{
+			Debug.Log("YOU WIN!  All enemies eliminated.");
+		}
+		else if (_totalCivilians <= 0)
+		{
+			Debug.Log("YOU LOSE!  All civilians eliminated.");
+		}
+	}
 }

@@ -4443,7 +4443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   armor: 0
-  healthRegenRate: 2
+  healthRegenRate: 0
   godMode: 0
   alive: 1
   isTakingDamage: 0
@@ -4505,7 +4505,7 @@ MonoBehaviour:
   animTrigName: Death
   animReviveTrigName: Revive
   animGotHitTrigName: GotHit
-  chanceOfRevive: 90
+  chanceOfRevive: 0
   deathFXPrefab: {fileID: 137858, guid: b1f9e1a7a2806304a9cf292a1e9e696d, type: 2}
   deathSound: {fileID: 8300000, guid: f54329d42fbd39a40a69da460740ae46, type: 3}
   leaveCorpse: 0
@@ -4551,8 +4551,8 @@ MonoBehaviour:
   - Team4
   sightRange: 150
   shootRange: 15
-  meleeRange: 3
-  angleOfSight: 180
+  meleeRange: 1.5
+  angleOfSight: 60
   enemyArr: []
   allyArr: []
   nearestTarget: {fileID: 0}
@@ -4577,7 +4577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useAnimation: 1
   animMeleeTrigger: Melee
-  damage: 65
+  damage: 25
   timeBetweenAttacks: 0.5
   animationTime: 0.8
   damageDistance: 3
@@ -4634,7 +4634,7 @@ MonoBehaviour:
   isChasing: 0
   chaseEnemies: 1
   crouchWhenHit: 1
-  randomMoveWhenHit: 0
+  randomMoveWhenHit: 1
   randomTurnWhenHit: 1
 --- !u!114 &114000014192172810
 MonoBehaviour:
@@ -4886,10 +4886,10 @@ NavMeshAgent:
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 1.2
-  m_AutoTraverseOffMeshLink: 1
+  m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 3

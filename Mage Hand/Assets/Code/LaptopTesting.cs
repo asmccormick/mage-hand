@@ -11,6 +11,7 @@ public class LaptopTesting : MonoBehaviour {
 	[SerializeField] private float _handRotSpeed;
 	[SerializeField] private float _handMoveSpeed;
 	[SerializeField] private SendDamage _sendDamageScript;
+	[SerializeField] private AnimateRipple _animateRippleScript;
 
 
 	void Start () {
@@ -56,6 +57,10 @@ public class LaptopTesting : MonoBehaviour {
 		if (Input.GetKey("f")) {_rightController.transform.Translate(Vector3.forward * -_handMoveSpeed);}
 
 		// Damage Target
-		if (Input.GetKey(KeyCode.Space)) {_sendDamageScript.DamageTarget();}
+		if (Input.GetKey(KeyCode.Space)) 
+		{
+			_sendDamageScript.DamageTarget();
+			_animateRippleScript.Burst();
+		}
 	}
 }

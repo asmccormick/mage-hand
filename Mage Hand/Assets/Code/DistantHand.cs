@@ -17,7 +17,6 @@ public class DistantHand : MonoBehaviour {
 
 	void OnCollisionEnter (Collision collision)
 	{
-		Debug.Log("distant hand collides with " + collision.gameObject.name);
 		_sendDamageScript.SetTarget(collision.gameObject);
 	}
 }

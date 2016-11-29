@@ -4598,10 +4598,10 @@ MonoBehaviour:
   - Team2
   - Team3
   - Team4
-  sightRange: 150
-  shootRange: 40
+  sightRange: 500
+  shootRange: 200
   meleeRange: 2
-  angleOfSight: 35
+  angleOfSight: 45
   enemyArr: []
   allyArr: []
   nearestTarget: {fileID: 0}
@@ -4685,11 +4685,11 @@ MonoBehaviour:
   aimCheat: 1
   BulletPosition: {fileID: 4000013649221826}
   bulletToFire: {fileID: 141800, guid: 6e48312e73dfb0e4b906e6d02797b124, type: 2}
-  timeBetweenAttacks: 1
+  timeBetweenAttacks: 3
   muzzleFlash: {fileID: 100000, guid: 4560e456c4ec0d3418fffd368dd1e7ff, type: 2}
   muzzleFlashPosition: {fileID: 4000013649221826}
   objectPooler: {fileID: 0}
-  aimHeightOffset: 0.5
+  aimHeightOffset: 0.1
   currentTarget: {fileID: 0}
   isFiring: 0
   paidSettingsUnlocked: 0
@@ -4705,9 +4705,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coverBehavior: 0
-  proximity: 50
+  proximity: 100
   sizePreference: 0
-  coverLocation: 1
+  coverLocation: 2
   useDeepAnalysis: 1
   useCrouch: 1
 --- !u!136 &136000013733998526
@@ -4943,10 +4943,10 @@ NavMeshAgent:
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 1.2
-  m_AutoTraverseOffMeshLink: 1
+  m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 3

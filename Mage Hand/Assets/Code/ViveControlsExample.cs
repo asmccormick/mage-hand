@@ -14,6 +14,7 @@ public class ViveControlsExample : MonoBehaviour {
 
 	private bool _leftController;
 	[SerializeField] private SendDamage _sendDamageScript;
+	[SerializeField] private AnimateRipple _animateRippleScript;
 
 
     void Start() {
@@ -47,6 +48,7 @@ public class ViveControlsExample : MonoBehaviour {
 		if (!_leftController)
 		{
 			_sendDamageScript.DamageTarget();
+			_animateRippleScript.Burst();
 		}
 	}
 
