@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 25
-  destroyOnImpact: 1
+  destroyOnImpact: 0
   autoDestroy: 1
   secondsToSelfDestruct: 5
   onHitEffects: {fileID: 137858, guid: b1f9e1a7a2806304a9cf292a1e9e696d, type: 2}
