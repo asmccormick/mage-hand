@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using SilverAI.Core;
+using UnityEngine.SceneManagement;	
 
 
 public class PlayerHealth : MonoBehaviour {
@@ -8,61 +9,36 @@ public class PlayerHealth : MonoBehaviour {
 	[SerializeField] private float _maxHealth;
 	private float _currentHealth;
 	[SerializeField] private Renderer _circleOfPainRenderer;
-	[SerializeField] private float _painDecayRate;
 	private SilverAI.Core.Health _healthComponent;
 	[SerializeField] private float _regenerateRate;
+	private LoadLevel _loadLevelScript;
+	[SerializeField] private bool _godMode;
 
 
-	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		_healthComponent = GetComponent<SilverAI.Core.Health>();
+		if (_healthComponent == null) {Debug.Log("CANNOT FIND HEALTH COMPONENT.  Ensure that health script is attached to Player Target game object, but is disabled.");}
 		_healthComponent.resetHealth(_maxHealth);
-		_healthComponent.resetHealthRegen(_regenerateRate);
-		//InvokeRepeating("checkIfReceivingDamage", 0.1f, 0.1f);
-		InvokeRepeating("checkPlayerHealth", 0.1f, 0.1f);
-
+		_loadLevelScript = GameObject.Find("LoadLevel").GetComponent<LoadLevel>();
+		_healthComponent.godMode = _godMode;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		//checkIfReceivingDamage ();
-		AnimateCircleOfPain();
-		//Debug.Log("current pain = " + _currentPain);
 
+	void Update () 
+	{
+		if (_healthComponent)		// health is only used in the gameplay scenes, not other menus
+		{
+			if (_healthComponent.health < _maxHealth) {_healthComponent.health += _regenerateRate * Time.deltaTime;}
+			AnimateCircleOfPain();
+			if (_healthComponent.alive == false) {_loadLevelScript.PlayerLost();}
+		}
 	}
 
 	private void AnimateCircleOfPain ()
 	{
-		if (_healthComponent.health < 100)
-		{
-			_currentPain -= _painDecayRate;
-			float _tempAlpha = _currentPain / 100;
-			Color _tempColor = new Color(_circleOfPainRenderer.material.color.r, _circleOfPainRenderer.material.color.g, _circleOfPainRenderer.material.color.b, _tempAlpha);
-			_circleOfPainRenderer.material.color = _tempColor;
-		}
-	}
-
-	/*
-	void OnCollisionEnter (Collision collision)
-	{
-		Debug.Log("player health collision = " + collision.gameObject.name);
-
-	}
-	*/
-
-	void checkIfReceivingDamage ()
-	{
-		if (_healthComponent.checkIfReceivingDamage() == true)
-		{
-			Debug.Log ("TOOK DAMAGE, damage amount = " + _healthComponent.lastDamage);
-			_currentPain += _healthComponent.lastDamage;
-		}
-	}
-
-	void checkPlayerHealth ()
-	{
-		float _health = _healthComponent.health;
-		Debug.Log("health = " + _health);
-		if (_health < 100)
+		float _tempAlpha = (_maxHealth - _healthComponent.health) / _maxHealth;
+		Color _tempColor = new Color(_circleOfPainRenderer.material.color.r, _circleOfPainRenderer.material.color.g, _circleOfPainRenderer.material.color.b, _tempAlpha);
+		_circleOfPainRenderer.material.color = _tempColor;
 	}
 }

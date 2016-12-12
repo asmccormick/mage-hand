@@ -19,7 +19,7 @@ public class DetectDeath : MonoBehaviour {
 
 	void Update () {
 	
-		if (_healthComponent.health <=0)
+		if (_healthComponent.alive == false && _checkHealth)
 		{
 			if (gameObject.tag == "Team1")
 			{
@@ -29,8 +29,8 @@ public class DetectDeath : MonoBehaviour {
 			{
 				_winLoseTriggersScript.CivilianKilled();
 			}
+
 			_checkHealth = false;
-		
 		}
 	}
 }

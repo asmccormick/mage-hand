@@ -12,6 +12,8 @@ TagManager:
   - Projectile
   - HidingPlace
   - Right Hand
+  - UI
+  - Nest Teleporter
   layers:
   - Default
   - TransparentFX

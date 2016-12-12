@@ -578,6 +578,7 @@ GameObject:
   - 114: {fileID: 114000013109826546}
   - 114: {fileID: 114000013118627476}
   - 114: {fileID: 114000013152057708}
+  - 114: {fileID: 114000012738230650}
   m_Layer: 0
   m_Name: Modified Civilian
   m_TagString: Team2
@@ -4533,6 +4534,17 @@ MonoBehaviour:
   isRangedAttack: 0
   isMeleeAttack: 0
   meleeTarget: {fileID: 0}
+--- !u!114 &114000012738230650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011016394982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe178540ef4924173b01434c304d954d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012793097102
 MonoBehaviour:
   m_ObjectHideFlags: 1
