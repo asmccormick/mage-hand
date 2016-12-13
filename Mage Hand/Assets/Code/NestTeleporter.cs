@@ -8,7 +8,6 @@ public class NestTeleporter : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_cameraRig = GameObject.Find("[CameraRig] modified");
-		Debug.Log("camerarig = " + _cameraRig);
 	}
 	
 	// Update is called once per frame
@@ -18,6 +17,6 @@ public class NestTeleporter : MonoBehaviour {
 
 	public void TeleportHere ()
 	{
-		_cameraRig.transform.position = transform.position;
+		_cameraRig.transform.position = transform.parent.position;
 	}
 }

@@ -13,10 +13,15 @@ public class SpawnNPCs : MonoBehaviour {
 	private float _lastSpawnTime;
 	private bool _shouldSpawn;
 	private RaycastHit _hit;
+	[SerializeField] private int _initialSpawn;
 
 	// Use this for initialization
 	void Start () {
-
+		for (int i = 0; i < _initialSpawn; i++) 
+		{
+			GenerateNewSpawnPosition();
+			RaycastToGround();
+		}
 	}
 
 	// Update is called once per frame
@@ -50,7 +55,7 @@ public class SpawnNPCs : MonoBehaviour {
 	private void GenerateNewSpawnPosition ()
 	{
 		_newSpawnPos.x = Random.Range(-_spawnRange,_spawnRange);
-		_newSpawnPos.y = 100;
+		_newSpawnPos.y = 20;
 		_newSpawnPos.z = Random.Range(-_spawnRange,_spawnRange);
 	}
 

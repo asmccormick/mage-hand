@@ -4587,8 +4587,8 @@ MonoBehaviour:
   chanceOfRevive: 0
   deathFXPrefab: {fileID: 137858, guid: b1f9e1a7a2806304a9cf292a1e9e696d, type: 2}
   deathSound: {fileID: 8300000, guid: f54329d42fbd39a40a69da460740ae46, type: 3}
-  leaveCorpse: 0
-  waitBeforeDestroy: 10
+  leaveCorpse: 1
+  waitBeforeDestroy: 120
   useRagdoll: 0
   dropWeaponOnDeath: 0
   weaponModel: {fileID: 0}
@@ -4697,7 +4697,7 @@ MonoBehaviour:
   aimCheat: 1
   BulletPosition: {fileID: 4000013649221826}
   bulletToFire: {fileID: 141800, guid: 6e48312e73dfb0e4b906e6d02797b124, type: 2}
-  timeBetweenAttacks: 3
+  timeBetweenAttacks: 2
   muzzleFlash: {fileID: 100000, guid: 4560e456c4ec0d3418fffd368dd1e7ff, type: 2}
   muzzleFlashPosition: {fileID: 4000013649221826}
   objectPooler: {fileID: 0}
