@@ -5,14 +5,9 @@ public class DistantHand : MonoBehaviour {
 
 	private SendDamage _sendDamageScript;
 
-	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		_sendDamageScript = GetComponent<SendDamage>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 
 	void OnCollisionEnter (Collision collision)

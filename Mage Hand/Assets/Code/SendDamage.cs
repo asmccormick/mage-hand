@@ -6,6 +6,17 @@ using SilverAI.Core;
 public class SendDamage : MonoBehaviour {
 
 	private GameObject _target;
+	private bool _canDamage;
+	private float _disableDamageTime;
+	private Renderer _handRenderer;
+	[SerializeField] private AnimateRipple _animateRippleScript;
+
+	void Start ()
+	{
+		_handRenderer = GetComponent<Renderer>();
+		_handRenderer.material.color = Color.green;
+		_canDamage = true;
+	}
 
 	public void SetTarget(GameObject _thisTarget)
 	{
@@ -14,7 +25,7 @@ public class SendDamage : MonoBehaviour {
 
 	public void DamageTarget()
 	{
-		if (_target != null)
+		if (_target != null && _canDamage)
 		{
 			if(_target.GetComponent<SilverAI.Core.Health>() != null)
 			{
@@ -30,6 +41,17 @@ public class SendDamage : MonoBehaviour {
 			{
 				_target.GetComponent<NestTeleporter>().TeleportHere();
 			}
+
+			_canDamage = false;
+			_handRenderer.material.color = Color.red;
+			_animateRippleScript.Burst();
+			Invoke ("ReenableDamageAbility", 2);
 		}
+	}
+
+	private void ReenableDamageAbility ()
+	{
+		_canDamage = true;
+		_handRenderer.material.color = Color.green;
 	}
 }

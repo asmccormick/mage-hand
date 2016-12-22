@@ -2594,7 +2594,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013001065972}
-  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
+  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2678,7 +2678,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011016394982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.817842, y: -0.04615418, z: -26.016834}
+  m_LocalPosition: {x: 22.066578, y: -0.02180605, z: -12.309193}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -4368,7 +4368,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -4385,7 +4385,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -4428,7 +4428,12 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some transforms are animated by both a Humanoid
+    animation clip and a Generic animation clip. Only the Humanoid clip will be applied
+    on those transforms.\n\tTransform 'B_L_Foot'\n\tTransform 'B_Pelvis'\n\tTransform
+    'B_L_Forearm'\n\tTransform 'B_R_Calf'\n\tTransform 'B_Spine1'\n\tTransform 'B_R_Forearm'\n\tTransform
+    'B_Spine2'\n\tTransform 'B_L_UpperArm'\n\tTransform 'B_R_Foot'\n\tTransform 'B_Spine'\n\tand
+    more ...\n\tFrom animation clip 'Unarmed-Attack-R3'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114000010888217868
@@ -4508,14 +4513,14 @@ MonoBehaviour:
   animGotHitTrigName: GotHit
   chanceOfRevive: 0
   deathFXPrefab: {fileID: 137858, guid: b1f9e1a7a2806304a9cf292a1e9e696d, type: 2}
-  deathSound: {fileID: 8300000, guid: f54329d42fbd39a40a69da460740ae46, type: 3}
+  deathSound: {fileID: 8300000, guid: 89b1fc3896ea94e48a0b1c9c9d363342, type: 3}
   leaveCorpse: 1
-  waitBeforeDestroy: 120
+  waitBeforeDestroy: 30
   useRagdoll: 0
   dropWeaponOnDeath: 0
   weaponModel: {fileID: 0}
-  removeColliders: 1
-  disableRigidbody: 1
+  removeColliders: 0
+  disableRigidbody: 0
 --- !u!114 &114000012487971976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4563,7 +4568,7 @@ MonoBehaviour:
   - Team4
   sightRange: 150
   shootRange: 15
-  meleeRange: 1.5
+  meleeRange: 2
   angleOfSight: 60
   enemyArr: []
   allyArr: []
@@ -4589,13 +4594,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useAnimation: 1
   animMeleeTrigger: Melee
-  damage: 25
+  damage: 464
   timeBetweenAttacks: 0.5
-  animationTime: 0.8
+  animationTime: 1.7
   damageDistance: 3
   onHitEffect: {fileID: 137858, guid: b1f9e1a7a2806304a9cf292a1e9e696d, type: 2}
   onHitEffectPosition: {fileID: 4000013925919680}
-  attackSoundClip: {fileID: 0}
+  attackSoundClip: {fileID: 8300000, guid: 9cb7edebc6acd491aa9303c62437908f, type: 3}
   isAttacking: 0
   aafAAq: 0
 --- !u!114 &114000013118627476
@@ -4899,9 +4904,9 @@ NavMeshAgent:
   m_AngularSpeed: 120
   m_StoppingDistance: 1.2
   m_AutoTraverseOffMeshLink: 0
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 3
+  m_ObstacleAvoidanceType: 4

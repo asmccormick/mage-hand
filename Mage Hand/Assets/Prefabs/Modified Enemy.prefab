@@ -2932,7 +2932,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013292227574}
   m_LocalRotation: {x: 0, y: 0.6241167, z: 0, w: 0.7813311}
-  m_LocalPosition: {x: 3.19, y: -2.614916e-16, z: 5.87}
+  m_LocalPosition: {x: 21.599533, y: -0.047124784, z: -16.022099}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -4346,7 +4346,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -4370,7 +4370,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -4430,7 +4430,12 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some transforms are animated by both a Humanoid
+    animation clip and a Generic animation clip. Only the Humanoid clip will be applied
+    on those transforms.\n\tTransform 'B_L_Foot'\n\tTransform 'B_Pelvis'\n\tTransform
+    'B_L_Forearm'\n\tTransform 'B_R_Calf'\n\tTransform 'B_Spine1'\n\tTransform 'B_R_Forearm'\n\tTransform
+    'B_Spine2'\n\tTransform 'B_L_UpperArm'\n\tTransform 'B_R_Foot'\n\tTransform 'B_Spine'\n\tand
+    more ...\n\tFrom animation clip 'Unarmed-Attack-R3'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114000010291962840
@@ -4515,7 +4520,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013292227574}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -247489917, guid: f4e76a7a9c05da344b6c20a82a5eb3ca, type: 3}
   m_Name: 
@@ -4586,14 +4591,14 @@ MonoBehaviour:
   animGotHitTrigName: GotHit
   chanceOfRevive: 0
   deathFXPrefab: {fileID: 137858, guid: b1f9e1a7a2806304a9cf292a1e9e696d, type: 2}
-  deathSound: {fileID: 8300000, guid: f54329d42fbd39a40a69da460740ae46, type: 3}
+  deathSound: {fileID: 8300000, guid: 0409dea3320734464a25359fb698d51f, type: 3}
   leaveCorpse: 1
-  waitBeforeDestroy: 120
+  waitBeforeDestroy: 30
   useRagdoll: 0
   dropWeaponOnDeath: 0
   weaponModel: {fileID: 0}
-  removeColliders: 1
-  disableRigidbody: 1
+  removeColliders: 0
+  disableRigidbody: 0
 --- !u!114 &114000012745932584
 MonoBehaviour:
   m_ObjectHideFlags: 1

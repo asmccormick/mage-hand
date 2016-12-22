@@ -37,6 +37,5 @@ public class LoadLevel : MonoBehaviour {
 	public void LoadLevelFromUi (string _sceneName)
 	{
 		SceneManager.LoadScene(_sceneName);
-
 	}
 }

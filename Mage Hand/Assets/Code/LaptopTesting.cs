@@ -61,7 +61,7 @@ public class LaptopTesting : MonoBehaviour {
 		if (Input.GetKey(KeyCode.Space)) 
 		{
 			_sendDamageScript.DamageTarget();
-			_animateRippleScript.Burst();
+			//_animateRippleScript.Burst();
 		}
 	}
 }

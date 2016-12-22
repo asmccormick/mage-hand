@@ -1,27 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SpawnNPCs : MonoBehaviour {
 
-	[SerializeField] private Transform _npcPrefab;
-	[SerializeField] private Transform _spawnParticleSystem;
-	[SerializeField] private int _qtyToSpawn;
+	//[SerializeField] private Transform _npcPrefab;
+	[SerializeField] private Transform _spawnEffect;
+	private int _qtyToSpawn;
 	private int _qtySpawned;
-	[SerializeField] private int _spawnRange;
+	private int _spawnRange = 35;
 	private Vector3 _newSpawnPos;
 	[SerializeField] private float _timeBetweenSpawns;
 	private float _lastSpawnTime;
 	private bool _shouldSpawn;
 	private RaycastHit _hit;
-	[SerializeField] private int _initialSpawn;
+	//[SerializeField] private int _initialSpawn;
+	//[SerializeField] private bool _spawnFromPortal;
+	[SerializeField] private float _delayBeforeSpawning;
+	[SerializeField] private List<Transform> _prefabList = new List<Transform>();
 
 	// Use this for initialization
 	void Start () {
-		for (int i = 0; i < _initialSpawn; i++) 
-		{
-			GenerateNewSpawnPosition();
-			RaycastToGround();
-		}
+		
 	}
 
 	// Update is called once per frame
@@ -31,11 +31,22 @@ public class SpawnNPCs : MonoBehaviour {
 			GenerateNewSpawnPosition();
 			RaycastToGround();
 		}
-		else if (_shouldSpawn == false && Time.time > _lastSpawnTime + _timeBetweenSpawns)
+		else if (_shouldSpawn == false && Time.time > _lastSpawnTime + _timeBetweenSpawns && Time.time > _delayBeforeSpawning)
 		{
 			_shouldSpawn = true;
 		}
 	}
+
+	/*
+	public void InitialSpawn ()
+	{
+		for (int i = 0; i < _initialSpawn; i++) 
+		{
+			GenerateNewSpawnPosition();
+			RaycastToGround();
+		}
+	}
+	*/
 
 	private void RaycastToGround ()
 	{
@@ -44,7 +55,8 @@ public class SpawnNPCs : MonoBehaviour {
 		{
 			if (_hit.transform.name == "Ground Central")
 			{
-				Instantiate(_npcPrefab, _hit.point, Quaternion.identity);
+				Instantiate(_prefabList[Random.Range(0,_prefabList.Count)], _hit.point, Quaternion.identity);
+				if (_spawnEffect) {Instantiate(_spawnEffect, _hit.point, Quaternion.identity);}
 				_qtySpawned++;
 				_lastSpawnTime = Time.time;
 				_shouldSpawn = false;
@@ -56,11 +68,16 @@ public class SpawnNPCs : MonoBehaviour {
 	{
 		_newSpawnPos.x = Random.Range(-_spawnRange,_spawnRange);
 		_newSpawnPos.y = 20;
-		_newSpawnPos.z = Random.Range(-_spawnRange,_spawnRange);
+		_newSpawnPos.z = Random.Range(-_spawnRange,_spawnRange);	
 	}
 
 	public int ReturnQty ()
 	{
 		return _qtyToSpawn;
+	}
+
+	public void SetQtyToSpawn (int n)
+	{
+		_qtyToSpawn = n;
 	}
 }

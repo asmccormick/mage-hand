@@ -48,7 +48,7 @@ public class ViveControlsExample : MonoBehaviour {
 		if (!_leftController)
 		{
 			_sendDamageScript.DamageTarget();
-			_animateRippleScript.Burst();
+			//_animateRippleScript.Burst();
 		}
 	}
 
