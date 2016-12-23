@@ -671,6 +671,7 @@ GameObject:
   - 82: {fileID: 82000014001438056}
   - 114: {fileID: 114000010200293820}
   - 114: {fileID: 114000013580589000}
+  - 114: {fileID: 114000012640736000}
   - 114: {fileID: 114000013426749996}
   - 114: {fileID: 114000010341830878}
   - 114: {fileID: 114000010809131820}
@@ -2482,7 +2483,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012442307230}
-  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
+  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2974,7 +2975,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3044,7 +3045,7 @@ MonoBehaviour:
   animTrigName: Death
   animReviveTrigName: Revive
   animGotHitTrigName: GotHit
-  chanceOfRevive: 70
+  chanceOfRevive: 0
   deathFXPrefab: {fileID: 137858, guid: b1f9e1a7a2806304a9cf292a1e9e696d, type: 2}
   deathSound: {fileID: 8300000, guid: f54329d42fbd39a40a69da460740ae46, type: 3}
   leaveCorpse: 0
@@ -3162,6 +3163,17 @@ MonoBehaviour:
   wanderDestination: {x: 0, y: 0, z: 0}
   canWander: 1
   isWandering: 0
+--- !u!114 &114000012640736000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012013226664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe178540ef4924173b01434c304d954d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012681750482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3193,7 +3205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   armor: 0
-  healthRegenRate: 2
+  healthRegenRate: 0
   godMode: 0
   alive: 1
   isTakingDamage: 0

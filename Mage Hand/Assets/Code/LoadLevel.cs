@@ -26,12 +26,12 @@ public class LoadLevel : MonoBehaviour {
 
 	public void PlayerLost()
 	{
-		SceneManager.LoadScene("Game Over");
+		SceneManager.LoadScene("Continue");
 	}
 
 	public void PlayerWon ()
 	{
-		SceneManager.LoadScene("Game Over");
+		SceneManager.LoadScene("Continue");
 	}
 
 	public void LoadLevelFromUi (string _sceneName)

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class SpawnNPCs : MonoBehaviour {
 
 	//[SerializeField] private Transform _npcPrefab;
+	[SerializeField] private bool _typeIsCivilians;
 	[SerializeField] private Transform _spawnEffect;
 	private int _qtyToSpawn;
 	private int _qtySpawned;
@@ -18,10 +19,18 @@ public class SpawnNPCs : MonoBehaviour {
 	//[SerializeField] private bool _spawnFromPortal;
 	[SerializeField] private float _delayBeforeSpawning;
 	[SerializeField] private List<Transform> _prefabList = new List<Transform>();
+	private InitializeLevel _initializeLevel;
 
 	// Use this for initialization
 	void Start () {
-		
+		_initializeLevel = GameObject.Find("Initialize Level").GetComponent<InitializeLevel>();
+		Debug.Log("init level = " + _initializeLevel);
+		if (_typeIsCivilians)
+		{
+			_qtyToSpawn = _initializeLevel._qtyCivilians[_initializeLevel._levelNumber];
+		} else {
+			_qtyToSpawn = _initializeLevel._qtyEnemies[_initializeLevel._levelNumber];
+		}
 	}
 
 	// Update is called once per frame

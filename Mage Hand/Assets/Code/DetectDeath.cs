@@ -19,6 +19,24 @@ public class DetectDeath : MonoBehaviour {
 
 	void Update () {
 	
+		if (_healthComponent.health <= 0 && _checkHealth)
+		{
+			if (gameObject.tag == "Team1")
+			{
+				_winLoseTriggersScript.EnemyKilled();		
+			}
+			else if (gameObject.tag == "Team2")
+			{
+				_winLoseTriggersScript.CivilianKilled();
+			}
+
+			_checkHealth = false;
+
+		}
+	}
+	/*
+	void LateUpdate () {
+
 		if (_healthComponent.alive == false && _checkHealth)
 		{
 			if (gameObject.tag == "Team1")
@@ -33,4 +51,5 @@ public class DetectDeath : MonoBehaviour {
 			_checkHealth = false;
 		}
 	}
+	*/
 }
