@@ -1895,7 +1895,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010191695456}
-  m_LocalRotation: {x: 0.5326752, y: 0.070340455, z: 0.83613276, w: -0.110415146}
+  m_LocalRotation: {x: 0.53267515, y: 0.07034045, z: 0.83613265, w: -0.11041513}
   m_LocalPosition: {x: 0.000022271464, y: -0.00006150465, z: 0.026027026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3254,7 +3254,7 @@ MonoBehaviour:
   aimCheat: 1
   BulletPosition: {fileID: 4000012907445260}
   bulletToFire: {fileID: 141800, guid: 6e48312e73dfb0e4b906e6d02797b124, type: 2}
-  timeBetweenAttacks: 0.2
+  timeBetweenAttacks: 0.5
   muzzleFlash: {fileID: 100000, guid: 4560e456c4ec0d3418fffd368dd1e7ff, type: 2}
   muzzleFlashPosition: {fileID: 4000012659089516}
   objectPooler: {fileID: 0}
