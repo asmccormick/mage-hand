@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 428928487, guid: f4e76a7a9c05da344b6c20a82a5eb3ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
+  damage: 50
   destroyOnImpact: 1
   autoDestroy: 1
   secondsToSelfDestruct: 5
