@@ -10,6 +10,7 @@ public class SendDamage : MonoBehaviour {
 	private float _disableDamageTime;
 	private Renderer _handRenderer;
 	[SerializeField] private AnimateRipple _animateRippleScript;
+	[SerializeField] private VibrateController _vibrateControllers;
 
 	void Start ()
 	{
@@ -45,6 +46,7 @@ public class SendDamage : MonoBehaviour {
 			_canDamage = false;
 			_handRenderer.material.color = Color.red;
 			_animateRippleScript.Burst();
+			_vibrateControllers.VibrateForDamage();
 			Invoke ("ReenableDamageAbility", 2);
 		}
 	}
@@ -53,5 +55,6 @@ public class SendDamage : MonoBehaviour {
 	{
 		_canDamage = true;
 		_handRenderer.material.color = Color.green;
+		_vibrateControllers.VibrateForFiring();
 	}
 }
