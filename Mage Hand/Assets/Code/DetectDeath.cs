@@ -19,7 +19,7 @@ public class DetectDeath : MonoBehaviour {
 
 	void Update () {
 	/*
-		if (_healthComponent.health <= 0 && _checkHealth)
+		if (_healthComponent.health <= 0 && _checkHealth)				// this script is no longer used.  functionality moved to WinLoseTriggers
 		{
 			if (gameObject.tag == "Team1")
 			{

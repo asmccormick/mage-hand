@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;	
+using UnityEngine.UI;
 
 
 
@@ -20,6 +21,7 @@ public class WinLoseTriggers : MonoBehaviour {
 	private float _startTime;
 	private bool _allEnemiesDead;
 	private bool _allCiviliansDead;
+	[SerializeField] private GameObject _endOfLevelText;
 
 
 
@@ -31,6 +33,7 @@ public class WinLoseTriggers : MonoBehaviour {
 		Debug.Log("enemies from wltrig = " + _totalEnemies);
 		Debug.Log("civs from wltrig = " + _totalCivilians);
 		_initializeLevel = GameObject.Find("Initialize Level").GetComponent<InitializeLevel>();
+		_endOfLevelText.SetActive(false);
 	}
 	
 
@@ -64,17 +67,27 @@ public class WinLoseTriggers : MonoBehaviour {
 			if (_allEnemiesDead) 
 			{
 				_initializeLevel._levelNumber ++;
-				SceneManager.LoadScene("Continue");
+				_endOfLevelText.SetActive(true);
+				_endOfLevelText.transform.GetComponentInChildren<Text>().text = "all enemies eliminated; \n loading next level...";
+				//SceneManager.LoadScene("Continue");
+				Invoke("LoadNextLevel", 5);
 			}
 
 			if (_allCiviliansDead)
 			{
 				_initializeLevel._levelNumber = 0;
-				SceneManager.LoadScene("Continue");
+				_endOfLevelText.SetActive(true);
+				_endOfLevelText.transform.GetComponentInChildren<Text>().text = "all friendlies eliminated; \n restarting...";
+				//SceneManager.LoadScene("Continue");
+				Invoke("LoadNextLevel", 5);
 			}
 		}
 	}
 
+	private void LoadNextLevel ()
+	{
+		SceneManager.LoadScene("Continue");
+	}
 
 	/*
 	public void EnemyKilled ()
