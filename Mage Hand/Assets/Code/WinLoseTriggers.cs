@@ -1,5 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;	
+
+
 
 public class WinLoseTriggers : MonoBehaviour {
 
@@ -9,9 +13,19 @@ public class WinLoseTriggers : MonoBehaviour {
 	public int _totalCivilians;
 	private InitializeLevel _initializeLevel;
 	[SerializeField] private LoadLevel _loadLevel;
+	public List<Transform> _enemyList = new List<Transform>();
+	public List<Transform> _civilianList = new List<Transform>();
+	public float _checkWinInterval;
+	private float _lastCheckWinTime;
+	private float _startTime;
+	private bool _allEnemiesDead;
+	private bool _allCiviliansDead;
 
-	// Use this for initialization
-	void Start () {
+
+
+	void Start () 
+	{
+		_startTime = Time.time;
 		_totalEnemies = _spawnEnemiesScript.ReturnQty();
 		_totalCivilians = _spawnCiviliansScript.ReturnQty();
 		Debug.Log("enemies from wltrig = " + _totalEnemies);
@@ -19,11 +33,50 @@ public class WinLoseTriggers : MonoBehaviour {
 		_initializeLevel = GameObject.Find("Initialize Level").GetComponent<InitializeLevel>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void Update () 
+	{
+		if (Time.time > _startTime + 10 && Time.time > _checkWinInterval + _lastCheckWinTime)
+		{
+			_lastCheckWinTime = Time.time;
+			for (int i = 0; i < _enemyList.Count; i++)
+			{
+				if (_enemyList[i] == null)
+				{
+					_allEnemiesDead = true;
+				} else {
+					_allEnemiesDead = false;
+					break;
+				}
+			}
+
+			for (int j = 0; j < _civilianList.Count; j++)
+			{
+				if (_civilianList[j] == null)
+				{
+					_allCiviliansDead = true;
+				} else {
+					_allCiviliansDead = false;
+					break;
+				}
+			}
+
+			if (_allEnemiesDead) 
+			{
+				_initializeLevel._levelNumber ++;
+				SceneManager.LoadScene("Continue");
+			}
+
+			if (_allCiviliansDead)
+			{
+				_initializeLevel._levelNumber = 0;
+				SceneManager.LoadScene("Continue");
+			}
+		}
 	}
 
+
+	/*
 	public void EnemyKilled ()
 	{
 		Debug.Log("EnemyKilled() called in WinLoseTriggers.cs");
@@ -53,4 +106,16 @@ public class WinLoseTriggers : MonoBehaviour {
 			_loadLevel.PlayerLost();
 		}
 	}
+	*/
+
+	public void AddToEnemyList (Transform _newEnemy)
+	{
+		_enemyList.Add(_newEnemy);
+	}
+
+	public void AddToCivilianList (Transform _newCivilian)
+	{
+		_civilianList.Add(_newCivilian);
+	}
+
 }

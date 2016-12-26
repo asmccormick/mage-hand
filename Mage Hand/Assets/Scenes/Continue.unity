@@ -334,12 +334,12 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1937556587}
+      objectReference: {fileID: 1432865170}
     - target: {fileID: 33000013517027274, guid: c839b9a91d03b4193a4a5b5fd86c61ef,
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 923338332}
+      objectReference: {fileID: 962743415}
     - target: {fileID: 114000013888067308, guid: c839b9a91d03b4193a4a5b5fd86c61ef,
         type: 2}
       propertyPath: _farHandRenderer
@@ -368,7 +368,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c839b9a91d03b4193a4a5b5fd86c61ef, type: 2}
   m_IsPrefabParent: 0
---- !u!43 &923338332
+--- !u!43 &962743415
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -693,7 +693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1157137515
 Transform:
   m_ObjectHideFlags: 0
@@ -870,6 +870,35 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.25}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!21 &1432865170
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: PixelSnap
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!23 &1474075385 stripped
 MeshRenderer:
   m_PrefabParentObject: {fileID: 23000011568819732, guid: 0ed61743108234446bbec3afabb6564c,
@@ -996,35 +1025,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1713283156}
   m_Script: {fileID: 11500000, guid: 8646d389a2aa84b7081b38713c2163b6, type: 3}
---- !u!21 &1937556587
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1992513192 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010616902756, guid: c839b9a91d03b4193a4a5b5fd86c61ef,

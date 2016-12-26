@@ -1087,7 +1087,6 @@ GameObject:
   - 114: {fileID: 114000012842285904}
   - 114: {fileID: 114000010895141884}
   - 114: {fileID: 114000011506548182}
-  - 114: {fileID: 114000013004229746}
   m_Layer: 0
   m_Name: Civilian V2
   m_TagString: Team2
@@ -2917,8 +2916,8 @@ MonoBehaviour:
   deathFXPrefab: {fileID: 137858, guid: b1f9e1a7a2806304a9cf292a1e9e696d, type: 2}
   deathSound: {fileID: 8300000, guid: f54329d42fbd39a40a69da460740ae46, type: 3}
   leaveCorpse: 0
-  waitBeforeDestroy: 3
-  useRagdoll: 0
+  waitBeforeDestroy: 1
+  useRagdoll: 1
   dropWeaponOnDeath: 0
   weaponModel: {fileID: 0}
   removeColliders: 1
@@ -2946,17 +2945,6 @@ MonoBehaviour:
   attackSoundClip: {fileID: 0}
   isAttacking: 0
   aafAAq: 0
---- !u!114 &114000013004229746
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013496448992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe178540ef4924173b01434c304d954d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000013285334646
 MonoBehaviour:
   m_ObjectHideFlags: 1

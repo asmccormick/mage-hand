@@ -18,7 +18,7 @@ public class DetectDeath : MonoBehaviour {
 	
 
 	void Update () {
-	
+	/*
 		if (_healthComponent.health <= 0 && _checkHealth)
 		{
 			if (gameObject.tag == "Team1")
@@ -33,6 +33,7 @@ public class DetectDeath : MonoBehaviour {
 			_checkHealth = false;
 
 		}
+		*/
 	}
 	/*
 	void LateUpdate () {

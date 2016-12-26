@@ -129,6 +129,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
+        type: 2}
+      propertyPath: _qtyCivilians.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
+        type: 2}
+      propertyPath: _qtyEnemies.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f88a2266b08294e898b4930200bf519c, type: 2}
   m_IsPrefabParent: 0

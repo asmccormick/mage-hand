@@ -20,6 +20,7 @@ public class SpawnNPCs : MonoBehaviour {
 	[SerializeField] private float _delayBeforeSpawning;
 	[SerializeField] private List<Transform> _prefabList = new List<Transform>();
 	private InitializeLevel _initializeLevel;
+	[SerializeField] private WinLoseTriggers _winLoseTriggers;
 
 	// Use this for initialization
 	void Start () {
@@ -64,8 +65,16 @@ public class SpawnNPCs : MonoBehaviour {
 		{
 			if (_hit.transform.name == "Ground Central")
 			{
-				Instantiate(_prefabList[Random.Range(0,_prefabList.Count)], _hit.point, Quaternion.identity);
+				Transform _newInstance;
+				_newInstance = Instantiate(_prefabList[Random.Range(0,_prefabList.Count)], _hit.point, Quaternion.identity) as Transform;
+				Debug.Log("new instance = " + _newInstance);
 				if (_spawnEffect) {Instantiate(_spawnEffect, _hit.point, Quaternion.identity);}
+				if (!_typeIsCivilians) 
+				{
+					_winLoseTriggers.AddToEnemyList(_newInstance);
+				} else {
+					_winLoseTriggers.AddToCivilianList(_newInstance);
+				}
 				_qtySpawned++;
 				_lastSpawnTime = Time.time;
 				_shouldSpawn = false;

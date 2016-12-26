@@ -665,7 +665,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012761248246}
   - 95: {fileID: 95000012154494188}
-  - 114: {fileID: 114000012640736000}
   - 136: {fileID: 136000013740348772}
   - 54: {fileID: 54000013319668578}
   - 195: {fileID: 195000010497556180}
@@ -3049,7 +3048,7 @@ MonoBehaviour:
   deathFXPrefab: {fileID: 137858, guid: b1f9e1a7a2806304a9cf292a1e9e696d, type: 2}
   deathSound: {fileID: 8300000, guid: f54329d42fbd39a40a69da460740ae46, type: 3}
   leaveCorpse: 0
-  waitBeforeDestroy: 10
+  waitBeforeDestroy: 1
   useRagdoll: 1
   dropWeaponOnDeath: 0
   weaponModel: {fileID: 0}
@@ -3163,17 +3162,6 @@ MonoBehaviour:
   wanderDestination: {x: 0, y: 0, z: 0}
   canWander: 1
   isWandering: 0
---- !u!114 &114000012640736000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012013226664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe178540ef4924173b01434c304d954d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000012681750482
 MonoBehaviour:
   m_ObjectHideFlags: 1
