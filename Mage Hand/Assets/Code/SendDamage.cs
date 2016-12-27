@@ -11,6 +11,7 @@ public class SendDamage : MonoBehaviour {
 	private Renderer _handRenderer;
 	[SerializeField] private AnimateRipple _animateRippleScript;
 	[SerializeField] private VibrateController _vibrateControllers;
+	[SerializeField] private AudioSource _frameAudioSource;
 
 	void Start ()
 	{
@@ -47,6 +48,7 @@ public class SendDamage : MonoBehaviour {
 			_handRenderer.material.color = Color.red;
 			_animateRippleScript.Burst();
 			_vibrateControllers.VibrateForDamage();
+			_frameAudioSource.Play();
 			Invoke ("ReenableDamageAbility", 2);
 		}
 	}
