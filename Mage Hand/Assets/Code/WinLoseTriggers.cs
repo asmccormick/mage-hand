@@ -13,7 +13,7 @@ public class WinLoseTriggers : MonoBehaviour {
 	public int _totalEnemies;
 	public int _totalCivilians;
 	private InitializeLevel _initializeLevel;
-	[SerializeField] private LoadLevel _loadLevel;
+	//[SerializeField] private LoadLevel _loadLevel;
 	public List<Transform> _enemyList = new List<Transform>();
 	public List<Transform> _civilianList = new List<Transform>();
 	public float _checkWinInterval;

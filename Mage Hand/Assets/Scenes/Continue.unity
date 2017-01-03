@@ -90,35 +90,6 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &81512658
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &89419308
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,12 +339,12 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 81512658}
+      objectReference: {fileID: 1905587579}
     - target: {fileID: 33000013517027274, guid: c839b9a91d03b4193a4a5b5fd86c61ef,
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1103531434}
+      objectReference: {fileID: 1125174961}
     - target: {fileID: 114000013888067308, guid: c839b9a91d03b4193a4a5b5fd86c61ef,
         type: 2}
       propertyPath: _farHandRenderer
@@ -667,7 +638,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!43 &1103531434
+--- !u!1 &1121132660 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010715175822, guid: c839b9a91d03b4193a4a5b5fd86c61ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 644907949}
+--- !u!43 &1125174961
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -795,11 +771,6 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
---- !u!1 &1121132660 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000010715175822, guid: c839b9a91d03b4193a4a5b5fd86c61ef,
-    type: 2}
-  m_PrefabInternal: {fileID: 644907949}
 --- !u!4 &1136211998 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013790342972, guid: 0ed61743108234446bbec3afabb6564c,
@@ -879,7 +850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1285296616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,6 +1094,35 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1713283156}
   m_Script: {fileID: 11500000, guid: 8646d389a2aa84b7081b38713c2163b6, type: 3}
+--- !u!21 &1905587579
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: PixelSnap
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1992513192 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010616902756, guid: c839b9a91d03b4193a4a5b5fd86c61ef,

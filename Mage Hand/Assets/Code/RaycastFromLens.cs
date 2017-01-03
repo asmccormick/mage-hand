@@ -33,7 +33,7 @@ public class RaycastFromLens : MonoBehaviour {
 				_distantHand.position = _hit.point;
 			}
 		} else {
-			_distantHand.position = _cameraEye.transform.position + _fwd * 20;
+			_distantHand.position = _cameraEye.transform.position + _fwd * 100;
 		}
 	}
 }
