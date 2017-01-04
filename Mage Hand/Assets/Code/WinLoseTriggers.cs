@@ -13,7 +13,6 @@ public class WinLoseTriggers : MonoBehaviour {
 	public int _totalEnemies;
 	public int _totalCivilians;
 	private InitializeLevel _initializeLevel;
-	//[SerializeField] private LoadLevel _loadLevel;
 	public List<Transform> _enemyList = new List<Transform>();
 	public List<Transform> _civilianList = new List<Transform>();
 	public float _checkWinInterval;
@@ -22,6 +21,7 @@ public class WinLoseTriggers : MonoBehaviour {
 	private bool _allEnemiesDead;
 	private bool _allCiviliansDead;
 	[SerializeField] private GameObject _endOfLevelText;
+	private bool _stopCheckingForEnd;
 
 
 
@@ -64,22 +64,26 @@ public class WinLoseTriggers : MonoBehaviour {
 				}
 			}
 
-			if (_allEnemiesDead) 
-			{
-				_initializeLevel._levelNumber ++;
-				_endOfLevelText.SetActive(true);
-				_endOfLevelText.transform.GetComponentInChildren<Text>().text = "all enemies eliminated; \n loading next level...";
-				//SceneManager.LoadScene("Continue");
-				Invoke("LoadNextLevel", 5);
-			}
 
-			if (_allCiviliansDead)
+			if (_stopCheckingForEnd == false)
 			{
-				_initializeLevel._levelNumber = 0;
-				_endOfLevelText.SetActive(true);
-				_endOfLevelText.transform.GetComponentInChildren<Text>().text = "all friendlies eliminated; \n restarting...";
-				//SceneManager.LoadScene("Continue");
-				Invoke("LoadNextLevel", 5);
+				if (_allEnemiesDead) 
+				{
+					_initializeLevel._levelNumber ++;
+					_endOfLevelText.SetActive(true);
+					_endOfLevelText.transform.GetComponentInChildren<Text>().text = "all enemies eliminated; \n loading next level...";
+					Invoke("LoadNextLevel", 5);
+					_stopCheckingForEnd = true;
+				}
+
+				if (_allCiviliansDead)
+				{
+					_initializeLevel._levelNumber = 0;
+					_endOfLevelText.SetActive(true);
+					_endOfLevelText.transform.GetComponentInChildren<Text>().text = "all friendlies eliminated; \n restarting...";
+					Invoke("LoadNextLevel", 5);
+					_stopCheckingForEnd = true;
+				}	
 			}
 		}
 	}
@@ -88,38 +92,6 @@ public class WinLoseTriggers : MonoBehaviour {
 	{
 		SceneManager.LoadScene("Continue");
 	}
-
-	/*
-	public void EnemyKilled ()
-	{
-		Debug.Log("EnemyKilled() called in WinLoseTriggers.cs");
-		_totalEnemies--;
-		CheckWinLose();
-	}
-
-	public void CivilianKilled ()
-	{
-		Debug.Log("CivilianKilled() called in WinLoseTriggers.cs");
-		_totalCivilians--;
-		CheckWinLose();
-	}
-
-	private void CheckWinLose ()
-	{
-		if (_totalEnemies <= 0)
-		{
-			Debug.Log("YOU WIN!  All enemies eliminated.");
-			_initializeLevel._levelNumber ++;
-			_loadLevel.PlayerWon();
-		}
-		else if (_totalCivilians <= 0)
-		{
-			Debug.Log("YOU LOSE!  All civilians eliminated.");
-			_initializeLevel._levelNumber = 0;
-			_loadLevel.PlayerLost();
-		}
-	}
-	*/
 
 	public void AddToEnemyList (Transform _newEnemy)
 	{

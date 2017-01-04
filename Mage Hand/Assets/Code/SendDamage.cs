@@ -13,11 +13,18 @@ public class SendDamage : MonoBehaviour {
 	[SerializeField] private VibrateController _vibrateControllers;
 	[SerializeField] private AudioSource _frameAudioSource;
 
+	private GameObject _activatedHand;
+	private GameObject _deactivatedHand;
+
+
 	void Start ()
 	{
-		_handRenderer = GetComponent<Renderer>();
-		_handRenderer.material.color = Color.green;
+		//_handRenderer = GetComponent<Renderer>();
+		//_handRenderer.material.color = Color.green;
 		_canDamage = true;
+		_activatedHand = transform.FindChild("Activated Hand").gameObject;
+		_deactivatedHand = transform.FindChild("Deactivated Hand").gameObject;
+		_deactivatedHand.SetActive(false);
 	}
 
 	public void SetTarget(GameObject _thisTarget)
@@ -45,10 +52,12 @@ public class SendDamage : MonoBehaviour {
 			}
 
 			_canDamage = false;
-			_handRenderer.material.color = Color.red;
+			//_handRenderer.material.color = Color.red;
 			_animateRippleScript.Burst();
 			_vibrateControllers.VibrateForDamage();
 			_frameAudioSource.Play();
+			_activatedHand.SetActive(false);
+			_deactivatedHand.SetActive(true);
 			Invoke ("ReenableDamageAbility", 2);
 		}
 	}
@@ -56,7 +65,9 @@ public class SendDamage : MonoBehaviour {
 	private void ReenableDamageAbility ()
 	{
 		_canDamage = true;
-		_handRenderer.material.color = Color.green;
+		//_handRenderer.material.color = Color.green;
+		_activatedHand.SetActive(true);
+		_deactivatedHand.SetActive(false);
 		_vibrateControllers.VibrateForFiring();
 	}
 }

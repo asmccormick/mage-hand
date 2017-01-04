@@ -6,14 +6,16 @@ public class TriggerLens : MonoBehaviour {
 	[SerializeField] private Renderer _lensRenderer;
 	[SerializeField] private Renderer _rippleEffectRenderer;
 	[SerializeField] private AnimateRipple _animateRipple;
-	[SerializeField] private Renderer _farHandRenderer;
+	//[SerializeField] private Renderer _farHandRenderer;
 	[SerializeField] private Renderer _nearHandRenderer;
+	[SerializeField] private GameObject _distantHand;
+	[SerializeField] private GameObject _nearHand;
 
 	// Use this for initialization
 	void Start () {
 		_lensRenderer.enabled = false;
 		//_rippleEffectRenderer.enabled = true;
-		_farHandRenderer.enabled = false;
+		//_farHandRenderer.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -29,7 +31,9 @@ public class TriggerLens : MonoBehaviour {
 			//_rippleEffectRenderer.enabled = true;
 			//_animateRipple.Burst();
 			_nearHandRenderer.enabled = false;
-			_farHandRenderer.enabled = true;
+			//_farHandRenderer.enabled = true;
+			_distantHand.SetActive(true);
+			_nearHand.SetActive(false);
 		}
 	}
 
@@ -40,7 +44,9 @@ public class TriggerLens : MonoBehaviour {
 			_lensRenderer.enabled = false;
 			//_rippleEffectRenderer.enabled = false;
 			_nearHandRenderer.enabled = true;
-			_farHandRenderer.enabled = false; 
+			//_farHandRenderer.enabled = false; 
+			_distantHand.SetActive(false);
+			_nearHand.SetActive(true);
 		}
 	}
 }
