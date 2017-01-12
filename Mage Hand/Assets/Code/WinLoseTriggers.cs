@@ -10,8 +10,6 @@ public class WinLoseTriggers : MonoBehaviour {
 
 	[SerializeField] private SpawnNPCs _spawnEnemiesScript;
 	[SerializeField] private SpawnNPCs _spawnCiviliansScript;
-	public int _totalEnemies;
-	public int _totalCivilians;
 	private InitializeLevel _initializeLevel;
 	public List<Transform> _enemyList = new List<Transform>();
 	public List<Transform> _civilianList = new List<Transform>();
@@ -28,10 +26,6 @@ public class WinLoseTriggers : MonoBehaviour {
 	void Start () 
 	{
 		_startTime = Time.time;
-		_totalEnemies = _spawnEnemiesScript.ReturnQty();
-		_totalCivilians = _spawnCiviliansScript.ReturnQty();
-		Debug.Log("enemies from wltrig = " + _totalEnemies);
-		Debug.Log("civs from wltrig = " + _totalCivilians);
 		_initializeLevel = GameObject.Find("Initialize Level").GetComponent<InitializeLevel>();
 		_endOfLevelText.SetActive(false);
 	}
@@ -102,5 +96,14 @@ public class WinLoseTriggers : MonoBehaviour {
 	{
 		_civilianList.Add(_newCivilian);
 	}
+
+    public void PlayerDied()
+    {
+        _initializeLevel._levelNumber = 0;
+        _endOfLevelText.SetActive(true);
+        _endOfLevelText.transform.GetComponentInChildren<Text>().text = "you were shot to death; \n restarting...";
+        Invoke("LoadNextLevel", 5);
+        _stopCheckingForEnd = true;
+    }
 
 }

@@ -91,7 +91,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013277933702}
   - 33: {fileID: 33000013295143640}
-  - 23: {fileID: 23000011062812846}
   - 135: {fileID: 135000013596698126}
   m_Layer: 2
   m_Name: Collider
@@ -215,7 +214,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013423085446}
   - 33: {fileID: 33000014182742226}
-  - 65: {fileID: 65000014175461830}
   - 23: {fileID: 23000011709239158}
   m_Layer: 0
   m_Name: Cube (2)
@@ -269,7 +267,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013629788058}
   - 33: {fileID: 33000013100267518}
-  - 65: {fileID: 65000013720565594}
   - 23: {fileID: 23000012694263524}
   m_Layer: 0
   m_Name: Cube (3)
@@ -318,7 +315,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013823280778}
   - 33: {fileID: 33000012636418374}
-  - 65: {fileID: 65000012940578936}
   - 23: {fileID: 23000011157171320}
   m_Layer: 0
   m_Name: Cube
@@ -855,7 +851,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000014071913936}
   - 33: {fileID: 33000010222104208}
-  - 65: {fileID: 65000013004022592}
   - 23: {fileID: 23000011699738376}
   m_Layer: 0
   m_Name: Cube (1)
@@ -1442,10 +1437,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010831866316}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0797}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010987390046}
   - {fileID: 4000010948869082}
@@ -2152,35 +2147,6 @@ MeshRenderer:
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!23 &23000011062812846
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010159390658}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_SelectedWireframeHidden: 0
@@ -3576,54 +3542,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0.5}
---- !u!65 &65000012940578936
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010993411696}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65000013004022592
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013565294784}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65000013720565594
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010732346970}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65000014175461830
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010551540106}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!81 &81000014178578914
 AudioListener:
   m_ObjectHideFlags: 1
@@ -4106,7 +4024,7 @@ MonoBehaviour:
   _maxHealth: 100
   _circleOfPainRenderer: {fileID: 23000011386468470}
   _regenerateRate: 10
-  _godMode: 1
+  _godMode: 0
 --- !u!114 &114000013460638512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4184,7 +4102,7 @@ MonoBehaviour:
   _lensRenderer: {fileID: 23000011820017718}
   _rippleEffectRenderer: {fileID: 0}
   _animateRipple: {fileID: 114000010580848102}
-  _nearHandRenderer: {fileID: 23000011062812846}
+  _nearHandRenderer: {fileID: 0}
   _distantHand: {fileID: 0}
   _nearHand: {fileID: 1000010831866316}
 --- !u!114 &114000013913746658

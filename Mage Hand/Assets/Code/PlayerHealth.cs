@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour {
 	[SerializeField] private Renderer _circleOfPainRenderer;
 	private SilverAI.Core.Health _healthComponent;
 	[SerializeField] private float _regenerateRate;
-	private LoadLevel _loadLevelScript;
+    private WinLoseTriggers _winLoseTriggersScript;
 	[SerializeField] private bool _godMode;
 
 
@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour {
 		_healthComponent = GetComponent<SilverAI.Core.Health>();
 		if (_healthComponent == null) {Debug.Log("CANNOT FIND HEALTH COMPONENT.  Ensure that health script is attached to Player Target game object, but is disabled.");}
 		_healthComponent.resetHealth(_maxHealth);
-		_loadLevelScript = GameObject.Find("LoadLevel").GetComponent<LoadLevel>();
+        _winLoseTriggersScript = GameObject.Find("Win Lose Triggers").GetComponent<WinLoseTriggers>();
 		_healthComponent.godMode = _godMode;
 	}
 	
@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour {
 		{
 			if (_healthComponent.health < _maxHealth) {_healthComponent.health += _regenerateRate * Time.deltaTime;}
 			AnimateCircleOfPain();
-			if (_healthComponent.alive == false) {_loadLevelScript.PlayerLost();}
+			if (_healthComponent.alive == false) { _winLoseTriggersScript.PlayerDied();}
 		}
 	}
 
