@@ -41,4 +41,9 @@ public class PlayerHealth : MonoBehaviour {
 		Color _tempColor = new Color(_circleOfPainRenderer.material.color.r, _circleOfPainRenderer.material.color.g, _circleOfPainRenderer.material.color.b, _tempAlpha);
 		_circleOfPainRenderer.material.color = _tempColor;
 	}
+
+	public void HandsTakeDamage ()
+	{
+		_healthComponent.takeDamage(50);
+	}
 }

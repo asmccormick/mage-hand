@@ -10,6 +10,7 @@ public class TriggerLens : MonoBehaviour {
 	//[SerializeField] private Renderer _nearHandRenderer;
 	[SerializeField] private GameObject _distantHand;
 	[SerializeField] private GameObject _nearHand;
+	[SerializeField] private SendDamage _sendDamageScript;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +28,8 @@ public class TriggerLens : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Right Hand")
 		{
+			Debug.Log("collision with right hand");
+
 			_lensRenderer.enabled = true;
 			//_rippleEffectRenderer.enabled = true;
 			_animateRipple.Burst();
@@ -34,6 +37,8 @@ public class TriggerLens : MonoBehaviour {
 			//_farHandRenderer.enabled = true;
 			_distantHand.SetActive(true);
 			_nearHand.SetActive(false);
+
+			_sendDamageScript.SetHandPosition(true);
 		}
 	}
 
@@ -47,6 +52,9 @@ public class TriggerLens : MonoBehaviour {
 			//_farHandRenderer.enabled = false; 
 			_distantHand.SetActive(false);
 			_nearHand.SetActive(true);
+
+			_sendDamageScript.SetHandPosition(false);
+
 		}
 	}
 }

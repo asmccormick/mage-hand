@@ -15,6 +15,7 @@ public class SendDamage : MonoBehaviour {
 
 	private GameObject _activatedHand;
 	private GameObject _deactivatedHand;
+	private bool _handsInPosition;
 
 
 	void Start ()
@@ -34,7 +35,7 @@ public class SendDamage : MonoBehaviour {
 
 	public void DamageTarget()
 	{
-		if (_target != null && _canDamage)
+		if (_target != null && _canDamage && _handsInPosition)
 		{
 			if(_target.GetComponent<SilverAI.Core.Health>() != null)
 			{
@@ -69,5 +70,10 @@ public class SendDamage : MonoBehaviour {
 		_activatedHand.SetActive(true);
 		_deactivatedHand.SetActive(false);
 		_vibrateControllers.VibrateForFiring();
+	}
+
+	public void SetHandPosition (bool inPosition)
+	{
+		_handsInPosition = inPosition;
 	}
 }

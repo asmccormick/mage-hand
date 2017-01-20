@@ -92,6 +92,7 @@ GameObject:
   - 4: {fileID: 4000013277933702}
   - 33: {fileID: 33000013295143640}
   - 135: {fileID: 135000013596698126}
+  - 114: {fileID: 114000013474107392}
   m_Layer: 2
   m_Name: Collider
   m_TagString: Right Hand
@@ -196,8 +197,8 @@ GameObject:
   - 65: {fileID: 65000010794870444}
   - 54: {fileID: 54000011737058184}
   - 114: {fileID: 114000013888067308}
-  - 114: {fileID: 114000011903437094}
   - 82: {fileID: 82000012057824844}
+  - 114: {fileID: 114000010205472934}
   m_Layer: 2
   m_Name: Lens
   m_TagString: Untagged
@@ -3704,6 +3705,18 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013063068984}
   m_Enabled: 1
+--- !u!114 &114000010205472934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010435236072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3595866a72d4a5e83259b8a04456ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerHealthScript: {fileID: 114000013167871250}
 --- !u!114 &114000010423642936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3888,18 +3901,6 @@ MonoBehaviour:
   index: -1
   origin: {fileID: 0}
   isValid: 0
---- !u!114 &114000011903437094
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010435236072}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e084517baf0484c1689c45f4804ade99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cameraEyes: {fileID: 4000012394127566}
 --- !u!114 &114000011942096572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4037,6 +4038,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _distantHand: {fileID: 0}
+--- !u!114 &114000013474107392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010159390658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3595866a72d4a5e83259b8a04456ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerHealthScript: {fileID: 114000013167871250}
 --- !u!114 &114000013600168812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4101,10 +4114,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lensRenderer: {fileID: 23000011820017718}
   _rippleEffectRenderer: {fileID: 0}
-  _animateRipple: {fileID: 114000010580848102}
-  _nearHandRenderer: {fileID: 0}
+  _animateRipple: {fileID: 0}
   _distantHand: {fileID: 0}
   _nearHand: {fileID: 1000010831866316}
+  _sendDamageScript: {fileID: 0}
 --- !u!114 &114000013913746658
 MonoBehaviour:
   m_ObjectHideFlags: 1
