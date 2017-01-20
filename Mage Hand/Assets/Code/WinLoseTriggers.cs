@@ -63,11 +63,18 @@ public class WinLoseTriggers : MonoBehaviour {
 			{
 				if (_allEnemiesDead) 
 				{
-					_initializeLevel._levelNumber ++;
 					_endOfLevelText.SetActive(true);
-					_endOfLevelText.transform.GetComponentInChildren<Text>().text = "all enemies eliminated; \n loading next level...";
-					Invoke("LoadNextLevel", 5);
 					_stopCheckingForEnd = true;
+					if (_initializeLevel._levelNumber == 4)
+					{
+						_endOfLevelText.transform.GetComponentInChildren<Text>().text = "YOU WIN; YOU WIN; \n loading credits...";
+						_initializeLevel._levelNumber = 0; // so that player can restart game from You Win scene
+						Invoke("LoadWinScene", 5);
+					} else {
+						_initializeLevel._levelNumber ++;
+						_endOfLevelText.transform.GetComponentInChildren<Text>().text = "all enemies eliminated; \n loading next level...";
+						Invoke("LoadNextLevel", 5);
+					}
 				}
 
 				if (_allCiviliansDead)
@@ -85,6 +92,11 @@ public class WinLoseTriggers : MonoBehaviour {
 	private void LoadNextLevel ()
 	{
 		SceneManager.LoadScene("Continue");
+	}
+
+	private void LoadWinScene ()
+	{
+		SceneManager.LoadScene("You Win");
 	}
 
 	public void AddToEnemyList (Transform _newEnemy)

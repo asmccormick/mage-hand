@@ -28,7 +28,7 @@ public class HandsTakeDamage : MonoBehaviour {
 	{
 		if (collision.gameObject.tag == "projectile")
 		{
-			Debug.Log("bullet hit player trigger");
+			Debug.Log("bullet hit player trigger");	
 			_playerHealthScript.HandsTakeDamage();
 		}
 	}

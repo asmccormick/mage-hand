@@ -85,9 +85,9 @@ EditorBuildSettings:
     path: Assets/DEV ONLY/cover system test/cover test 2.unity
   - enabled: 0
     path: Assets/DEV ONLY/UFPS Demo - DEV.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Village Battle.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game Over.unity
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
@@ -95,3 +95,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Continue.unity
   - enabled: 1
     path: Assets/Scenes/Load First.unity
+  - enabled: 1
+    path: Assets/Scenes/You Win.unity
