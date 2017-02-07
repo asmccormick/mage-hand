@@ -45,5 +45,6 @@ public class PlayerHealth : MonoBehaviour {
 	public void HandsTakeDamage ()
 	{
 		_healthComponent.takeDamage(50);
+		Debug.Log("hands took damage in PlayerHealth.cs");
 	}
 }

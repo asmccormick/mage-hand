@@ -28,8 +28,6 @@ public class TriggerLens : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Right Hand")
 		{
-			Debug.Log("collision with right hand");
-
 			_lensRenderer.enabled = true;
 			//_rippleEffectRenderer.enabled = true;
 			_animateRipple.Burst();

@@ -137,7 +137,7 @@ Prefab:
     - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
         type: 2}
       propertyPath: _qtyEnemies.Array.data[0]
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
         type: 2}
