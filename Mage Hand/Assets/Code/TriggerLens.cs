@@ -15,12 +15,14 @@ public class TriggerLens : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_lensRenderer.enabled = false;
-		//_rippleEffectRenderer.enabled = true;
-		//_farHandRenderer.enabled = false;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        //_rippleEffectRenderer.enabled = true;
+        //_farHandRenderer.enabled = false;
+        _distantHand.SetActive(false);
+
+    }
+
+    // Update is called once per frame
+    void Update () {
 	
 	}
 
@@ -30,7 +32,7 @@ public class TriggerLens : MonoBehaviour {
 		{
 			_lensRenderer.enabled = true;
 			//_rippleEffectRenderer.enabled = true;
-			_animateRipple.Burst();
+			//_animateRipple.Burst();
 			//_nearHandRenderer.enabled = false;
 			//_farHandRenderer.enabled = true;
 			_distantHand.SetActive(true);
