@@ -132,52 +132,52 @@ Prefab:
     - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
         type: 2}
       propertyPath: _qtyCivilians.Array.data[0]
-      value: 20
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
         type: 2}
       propertyPath: _qtyEnemies.Array.data[0]
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
-        type: 2}
-      propertyPath: _qtyEnemies.Array.data[1]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
-        type: 2}
-      propertyPath: _qtyEnemies.Array.data[2]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
-        type: 2}
-      propertyPath: _qtyEnemies.Array.data[3]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
-        type: 2}
-      propertyPath: _qtyEnemies.Array.data[4]
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
-        type: 2}
-      propertyPath: _qtyCivilians.Array.data[1]
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
         type: 2}
-      propertyPath: _qtyCivilians.Array.data[2]
+      propertyPath: _qtyEnemies.Array.data[1]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
+        type: 2}
+      propertyPath: _qtyEnemies.Array.data[2]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
+        type: 2}
+      propertyPath: _qtyEnemies.Array.data[3]
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
+        type: 2}
+      propertyPath: _qtyEnemies.Array.data[4]
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
+        type: 2}
+      propertyPath: _qtyCivilians.Array.data[1]
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
         type: 2}
+      propertyPath: _qtyCivilians.Array.data[2]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
+        type: 2}
       propertyPath: _qtyCivilians.Array.data[3]
-      value: 8
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 114000010263659054, guid: f88a2266b08294e898b4930200bf519c,
         type: 2}
       propertyPath: _qtyCivilians.Array.data[4]
-      value: 9
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f88a2266b08294e898b4930200bf519c, type: 2}
