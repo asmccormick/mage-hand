@@ -2915,8 +2915,8 @@ MonoBehaviour:
   chanceOfRevive: 0
   deathFXPrefab: {fileID: 137858, guid: b1f9e1a7a2806304a9cf292a1e9e696d, type: 2}
   deathSound: {fileID: 8300000, guid: f54329d42fbd39a40a69da460740ae46, type: 3}
-  leaveCorpse: 1
-  waitBeforeDestroy: 3
+  leaveCorpse: 0
+  waitBeforeDestroy: 60
   useRagdoll: 0
   dropWeaponOnDeath: 0
   weaponModel: {fileID: 0}
