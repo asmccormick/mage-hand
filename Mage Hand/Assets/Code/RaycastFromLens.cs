@@ -27,7 +27,7 @@ public class RaycastFromLens : MonoBehaviour {
 
 		Vector3 _fwd = _rotation * Vector3.forward;
 		RaycastHit _hit;
-		Debug.DrawRay(_cameraEye.transform.position, _fwd * 100, Color.green, 1);
+		//Debug.DrawRay(_cameraEye.transform.position, _fwd * 100, Color.green, 1);
 		if (Physics.Raycast (_cameraEye.transform.position, _fwd, out _hit)) {
 			{
 				_distantHand.position = _hit.point;
